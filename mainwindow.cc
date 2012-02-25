@@ -2484,3 +2484,11 @@ void MainWindow::wordReceived( const QString & word)
     ui.translateLine->setText( word );
     translateInputFinished();
 }
+
+void MainWindow::on_clearButton_clicked()
+{
+    toggleMainWindow( true );
+    ui.translateLine->setText("");
+    translateInputFinished();
+    ui.translateLine->setFocus(Qt::OtherFocusReason);
+}

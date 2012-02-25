@@ -169,6 +169,7 @@ private:
 
 private slots:
 
+  void on_clearButton_clicked();
   void hotKeyActivated( int );
 
   /// If new release checks are on, santizies the next check time and starts
