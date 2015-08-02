@@ -3533,6 +3533,14 @@ void MainWindow::wordReceived( const QString & word)
     translateInputFinished( false );
 }
 
+void MainWindow::on_clearButton_clicked()
+{
+    toggleMainWindow( true );
+    ui.translateLine->setText("");
+    translateInputFinished();
+    ui.translateLine->setFocus(Qt::OtherFocusReason);
+}
+
 void MainWindow::headwordReceived( const QString & word, const QString & ID )
 {
     toggleMainWindow( true );
